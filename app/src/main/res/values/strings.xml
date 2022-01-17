@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Trip Application</string>
+
+    <string-array name="array_from">
+        <item> Lahore
+        </item>
+
+        <item> Multan
+        </item>
+
+        <item> Islamabad
+        </item>
+
+        <item> Karachi
+        </item>
+
+
+
+    </string-array>
+
+
+
+    <string-array name="array_to">
+        <item> Hunza
+        </item>
+
+        <item> Swat
+        </item>
+
+        <item> Murree
+        </item>
+
+
+
+
+    </string-array>
 </resources>
