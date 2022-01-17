@@ -34,4 +34,20 @@
 
 
     </string-array>
+
+
+
+    <string-array name="array_acc">
+        <item> Comfort
+        </item>
+
+        <item> Luxury
+        </item>
+
+
+
+
+
+
+    </string-array>
 </resources>
