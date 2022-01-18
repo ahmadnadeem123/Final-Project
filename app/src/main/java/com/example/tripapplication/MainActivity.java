@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(objj);
                 break;
 
+            case R.id.contact:
+                Intent obj3 = new Intent(MainActivity.this, Contact.class);
+                startActivity(obj3);
+                break;
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }

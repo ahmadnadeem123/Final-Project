@@ -25,6 +25,11 @@ public class BookPage extends AppCompatActivity {
                 startActivity(obj);
                 break;
 
+            case R.id.contact:
+                Intent obj1 = new Intent(BookPage.this, Contact.class);
+                startActivity(obj1);
+                break;
+
 
             default:
                 return super.onOptionsItemSelected(item);
