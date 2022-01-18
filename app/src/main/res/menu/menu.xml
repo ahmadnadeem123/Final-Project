@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/book"
+        android:icon="@drawable/ic_baseline_book_online_24"
+        android:title="Book Trip"
+
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/about"
+        android:title="About"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/contact"
+
+        android:title="Contact Us"
+        app:showAsAction="never"/>
+
+
+</menu>
