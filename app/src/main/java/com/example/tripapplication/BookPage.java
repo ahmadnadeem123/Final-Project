@@ -4,8 +4,10 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class BookPage extends AppCompatActivity {
 
@@ -15,27 +17,20 @@ public class BookPage extends AppCompatActivity {
         return true;
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.pract:
-//                Intent obj = new Intent(MainActivity.this, Practice.class);
-//                startActivity(obj);
-//                break;
-//
-//            case R.id.quiz:
-//                Random rand = new Random();
-//                int ran = rand.nextInt(4);
-//                Intent objj = new Intent(MainActivity.this, Quiz_1.class);
-//                objj.putExtra("value", (String.valueOf(ran)));
-//                startActivity(objj);
-//                break;
-//
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//        return false;
-//    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.about:
+                Intent obj = new Intent(BookPage.this, About.class);
+                startActivity(obj);
+                break;
+
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return false;
+    }
 
 
     @Override
