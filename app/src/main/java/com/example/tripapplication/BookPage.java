@@ -1,5 +1,6 @@
 package com.example.tripapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -44,5 +45,11 @@ public class BookPage extends AppCompatActivity {
 
         t1=findViewById(R.id.toolbar);
         setSupportActionBar(t1);
+
+
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
     }
 }
