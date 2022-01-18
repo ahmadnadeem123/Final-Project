@@ -6,12 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".BookPage">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1882D6"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Trip N Tour"
+        app:titleTextColor="#F0F1F8" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="367dp"
         android:layout_height="54dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="220dp"
         android:text="Enter the Information below to book your trip"
         android:textSize="20sp"
         android:textStyle="bold"

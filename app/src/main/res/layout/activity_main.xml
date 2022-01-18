@@ -6,12 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1882D6"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Trip N Tour"
+        app:titleTextColor="#F0F1F8" />
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="282dp"
         android:layout_height="63dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="96dp"
         android:text="Welcome toTrip's N Tour"
         android:textSize="25dp"
         android:textStyle="bold"
@@ -36,7 +52,7 @@
         android:layout_width="290dp"
         android:layout_height="224dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:text="Imagine checking one place for all your travel details and getting a heads up as things happen throughout your trip. See why life without TripIt is a distant memory for millions of travelers. Unlike other travel apps, Trips N Tour can organize your travel plans no matter where you book."
         android:textAlignment="viewStart"
         android:textSize="20sp"
