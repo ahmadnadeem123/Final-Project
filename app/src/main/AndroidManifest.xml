@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity
-            android:name=".Payment"
-            android:exported="false" />
+
         <activity
             android:name=".BookPage"
             android:exported="false"
@@ -20,6 +18,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.tripapplication.MainActivity" />
         </activity>
+
+
+
+        <activity
+            android:name=".Payment"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tripapplication.MainActivity" />
+        </activity>
+
+
+
         <activity
             android:name=".About"
             android:exported="false"
