@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBF9F9"
+    android:background="#403C3C"
     tools:context=".Payment">
 
 
@@ -29,7 +29,7 @@
         android:layout_marginStart="104dp"
         android:layout_marginTop="76dp"
         android:text="Trip N Tour"
-        android:textColor="#6C6B6B"
+        android:textColor="#F8F5F5"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="272dp"
         android:text="Calculated Amount"
-        android:textColor="#6C6B6B"
+        android:textColor="#F8F5F5"
         android:textSize="22dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,18 +56,31 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:text="TextView"
-        android:textColor="#6C6B6B"
+        android:textColor="#F8F5F5"
         android:textSize="23dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="402dp"
+        android:layout_height="234dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/trip4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="189dp"
         android:layout_height="59dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
         android:text="Confirm Booking"
+        android:textColor="#F8F5F5"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/payment" />
