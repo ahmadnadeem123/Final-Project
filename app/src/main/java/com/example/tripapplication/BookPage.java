@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -25,9 +27,16 @@ public class BookPage extends AppCompatActivity {
     DatePickerDialog picker;
     EditText eText;
     TextView tvw;
-
+    EditText no;
     DatePickerDialog picker1;
     EditText eText1;
+    EditText noofperson;
+    EditText noofdays;
+    Spinner depto;
+    Spinner depfrom;
+    Spinner accom;
+    Button b1;
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu2, menu);
@@ -68,6 +77,24 @@ public class BookPage extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+
+        noofperson=findViewById(R.id.editTextNumber);
+        depto=findViewById(R.id.spinner3);
+        depfrom=findViewById(R.id.spinner);
+        accom=findViewById(R.id.spinner4);
+        no=findViewById(R.id.editTextNumber);
+        noofdays=findViewById(R.id.editTextNumber2);
+
+
+        String departureto = depto.getSelectedItem().toString();
+        String departurefrom = depfrom.getSelectedItem().toString();
+        String accomodation = accom.getSelectedItem().toString();
+        String persons= noofperson.getText().toString();
+
+
+
+
+
 
 
         tvw=(TextView)findViewById(R.id.textView5);
@@ -125,10 +152,26 @@ public class BookPage extends AppCompatActivity {
         });
 
 
+         b1=findViewById(R.id.button2);
+         b1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+
+                 Intent obj=new Intent(BookPage.this, Payment.class);
+                 obj.putExtra("deptto",departureto );
+                 obj.putExtra("deptfrom",departurefrom  );
+                 obj.putExtra("accom",accomodation );
+                 obj.putExtra("person",no.getText().toString());
+                 obj.putExtra("checkin",eText.getText().toString() );
+                 obj.putExtra("checkout",eText1.getText().toString() );
+                 obj.putExtra("days",noofdays.getText().toString() );
+                 startActivity(obj);
 
 
 
-
+             }
+         });
 
 
 
