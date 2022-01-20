@@ -22,10 +22,6 @@ public class Payment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
 
-
-
-
-
         Intent obj = getIntent();
         String depto = obj.getStringExtra("deptto");
         String deptfrom = obj.getStringExtra("deptfrom");
@@ -34,134 +30,265 @@ public class Payment extends AppCompatActivity {
         String checkin = obj.getStringExtra("checkin");
         String checkout = obj.getStringExtra("checkout");
         String day = obj.getStringExtra("days");
-
-
-
-
-
-
-
+        int noofday=Integer.parseInt(day);
 
 
         float payment = 0;
-        int comfort=5000;
-        int luxury=7000;
 
 
-        if(deptfrom=="Lahore" && depto=="Hunza")
+        if(deptfrom.equals("Lahore") && depto.equals("Hunza"))
         {
-            if(accom=="Comfort")
+            if(accom.equals("Comfort"))
             {
-                payment = 13000 * Integer.valueOf(persons);
+                if(noofday<3)
+                {
+                    payment = 13000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (13000 * Integer.valueOf(persons) * noofday/3.5);
+
+                }
+
             }
-            else if(accom=="Luxury")
+
+            else if(accom.equals("Luxury"))
             {
-                payment = (float) (13000 * Integer.valueOf(persons) * 1.2);
+                if(noofday<3)
+                {
+                    payment = (float) (13000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (13000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+
+                }
             }
 
         }
 
-        else if(deptfrom=="Multan" && depto=="Hunza")
+        else if(deptfrom.equals("Multan") && depto.equals("Hunza"))
         {
-            if(accom=="Comfort")
+            if(accom.equals("Comfort"))
             {
-                payment = 14000 * Integer.valueOf(persons);
+                if(noofday<3) {
+                    payment = 14000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (14000 * Integer.valueOf(persons) * noofday/3.5);
+                }
             }
-            else if(accom=="Luxury")
+            else if(accom.equals("Luxury"))
             {
-                payment = (float) (14000 * Integer.valueOf(persons) * 1.2);
-            }
-
-        }
-        else if(deptfrom=="Islamabad" && depto=="Hunza")
-        {
-            if(accom=="Comfort")
-            {
-                payment = 11000 * Integer.valueOf(persons);
-            }
-            else if(accom=="Luxury")
-            {
-                payment = (float) (11000 * Integer.valueOf(persons) * 1.2);
-            }
-
-        }
-
-
-        else if(deptfrom=="Lahore" && depto=="Swat")
-        {
-            if(accom=="Comfort")
-            {
-                payment = 10000 * Integer.valueOf(persons);
-            }
-            else if(accom=="Luxury")
-            {
-                payment = (float) (10000 * Integer.valueOf(persons) * 1.2);
-            }
-
-        }
-
-        else if(deptfrom=="Multan" && depto=="Swat")
-        {
-            if(accom=="Comfort")
-            {
-                payment = 11000 * Integer.valueOf(persons);
-            }
-            else if(accom=="Luxury")
-            {
-                payment = (float) (11000 * Integer.valueOf(persons) * 1.2);
-            }
-
-        }
-
-        else if(deptfrom=="Islamabad" && depto=="Swat")
-        {
-            if(accom=="Comfort")
-            {
-                payment = 90000 * Integer.valueOf(persons);
-            }
-            else if(accom=="Luxury")
-            {
-                payment = (float) (90000 * Integer.valueOf(persons) * 1.2);
-            }
-
-        }
-
-        else if(deptfrom=="Lahore" && depto=="Murree")
-        {
-            if(accom=="Comfort")
-            {
-                payment = 7000 * Integer.valueOf(persons);
-            }
-            else if(accom=="Luxury")
-            {
-                payment = (float) (7000 * Integer.valueOf(persons) * 1.2);
+                if(noofday<3) {
+                    payment = (float) (14000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (14000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
             }
 
         }
 
 
-        else if(deptfrom=="Multan" && depto=="Murree")
+        else if(deptfrom.equals("Islamabad") && depto.equals("Hunza"))
         {
-            if(accom=="Comfort")
+            if(accom.equals("Comfort"))
             {
-                payment = 8000 * Integer.valueOf(persons);
+                if(noofday<3) {
+                    payment = 11000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (11000 * Integer.valueOf(persons) * noofday/3.5 );
+                }
+
+
             }
-            else if(accom=="Luxury")
+            else if(accom.equals("Luxury"))
             {
-                payment = (float) (8000 * Integer.valueOf(persons) * 1.2);
+                if(noofday<3) {
+                    payment = (float) (11000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (11000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
+
             }
 
         }
 
-        else if(deptfrom=="Islamabad" && depto=="Murree")
+        else if(deptfrom.equals("Lahore") && depto.equals("Swat"))
         {
-            if(accom=="Comfort")
+            if(accom.equals("Comfort"))
             {
-                payment = 6000 * Integer.valueOf(persons);
+                if(noofday<3) {
+                    payment = 10000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (10000 * Integer.valueOf(persons) * noofday/3.5 );
+                }
+
+
             }
-            else if(accom=="Luxury")
+            else if(accom.equals("Luxury"))
             {
-                payment = (float) (6000 * Integer.valueOf(persons) * 1.2);
+                if(noofday<3) {
+                    payment = (float) (10000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (10000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
+
+            }
+
+        }
+
+
+        else if(deptfrom.equals("Multan") && depto.equals("Swat"))
+        {
+            if(accom.equals("Comfort"))
+            {
+                if(noofday<3) {
+                    payment = 11000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (11000 * Integer.valueOf(persons) * noofday/3.5 );
+                }
+
+
+            }
+            else if(accom.equals("Luxury"))
+            {
+                if(noofday<3) {
+                    payment = (float) (11000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (11000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
+
+            }
+
+        }
+
+
+        else if(deptfrom.equals("Islamabad") && depto.equals("Swat"))
+        {
+            if(accom.equals("Comfort"))
+            {
+                if(noofday<3) {
+                    payment = 9000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (9000 * Integer.valueOf(persons) * noofday/3.5 );
+                }
+
+
+            }
+            else if(accom.equals("Luxury"))
+            {
+                if(noofday<3) {
+                    payment = (float) (9000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (9000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
+
+            }
+
+        }
+
+
+        else if(deptfrom.equals("Lahore") && depto.equals("Murree"))
+        {
+            if(accom.equals("Comfort"))
+            {
+                if(noofday<3) {
+                    payment = 8000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (8000 * Integer.valueOf(persons) * noofday/3.5 );
+                }
+
+
+            }
+            else if(accom.equals("Luxury"))
+            {
+                if(noofday<3) {
+                    payment = (float) (8000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (8000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
+
+            }
+
+        }
+
+        else if(deptfrom.equals("Multan") && depto.equals("Murree"))
+        {
+            if(accom.equals("Comfort"))
+            {
+                if(noofday<3) {
+                    payment = 9000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (9000 * Integer.valueOf(persons) * noofday/3.5 );
+                }
+
+
+            }
+            else if(accom.equals("Luxury"))
+            {
+                if(noofday<3) {
+                    payment = (float) (9000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (9000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
+
+            }
+
+        }
+
+
+        else if(deptfrom.equals("Islamabad") && depto.equals("Murree"))
+        {
+            if(accom.equals("Comfort"))
+            {
+                if(noofday<3) {
+                    payment = 7000 * Integer.valueOf(persons);
+                }
+                else
+                {
+                    payment = (float) (7000 * Integer.valueOf(persons) * noofday/3.5 );
+                }
+
+
+            }
+            else if(accom.equals("Luxury"))
+            {
+                if(noofday<3) {
+                    payment = (float) (7000 * Integer.valueOf(persons) * 1.2);
+                }
+                else
+                {
+                    payment = (float) (7000 * Integer.valueOf(persons) * noofday/3.5 * 1.2);
+                }
+
             }
 
         }
@@ -172,7 +299,7 @@ public class Payment extends AppCompatActivity {
 
 
         v1=findViewById(R.id.e1);
-        v1.setText(day);
+        v1.setText(String.valueOf(((int)payment)));
 
 
 

@@ -159,9 +159,9 @@ public class BookPage extends AppCompatActivity {
 
 
                  Intent obj=new Intent(BookPage.this, Payment.class);
-                 obj.putExtra("deptto",departureto );
-                 obj.putExtra("deptfrom",departurefrom  );
-                 obj.putExtra("accom",accomodation );
+                 obj.putExtra("deptto",depto.getSelectedItem().toString() );
+                 obj.putExtra("deptfrom",depfrom.getSelectedItem().toString()  );
+                 obj.putExtra("accom", accom.getSelectedItem().toString());
                  obj.putExtra("person",no.getText().toString());
                  obj.putExtra("checkin",eText.getText().toString() );
                  obj.putExtra("checkout",eText1.getText().toString() );
