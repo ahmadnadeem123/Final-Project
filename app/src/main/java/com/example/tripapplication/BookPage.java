@@ -86,6 +86,7 @@ public class BookPage extends AppCompatActivity {
         noofdays=findViewById(R.id.editTextNumber2);
 
 
+
         String departureto = depto.getSelectedItem().toString();
         String departurefrom = depfrom.getSelectedItem().toString();
         String accomodation = accom.getSelectedItem().toString();
@@ -97,7 +98,7 @@ public class BookPage extends AppCompatActivity {
 
 
 
-        tvw=(TextView)findViewById(R.id.textView5);
+
         eText=(EditText) findViewById(R.id.editText1);
         eText.setInputType(InputType.TYPE_NULL);
         eText.setOnClickListener(new View.OnClickListener() {
