@@ -37,12 +37,7 @@ public class Signup extends AppCompatActivity {
         login=findViewById(R.id.createtext);
         pbar=findViewById(R.id.progressBar);
         Auth=FirebaseAuth.getInstance();
-        if(Auth.getCurrentUser()!=null)
-        {
-            Intent i=new Intent(Signup.this,Login.class);
-            startActivity(i);
-            finish();
-        }
+        
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
