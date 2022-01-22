@@ -71,7 +71,7 @@ public class Signup extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            Toast.makeText(Signup.this,"User Created !",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Signup.this,"Sign Up Successfull !",Toast.LENGTH_SHORT).show();
                             Intent i=new Intent(Signup.this,Login.class);
                             startActivity(i);
                         }
@@ -82,6 +82,13 @@ public class Signup extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Signup.this,Login.class);
+                startActivity(i);
             }
         });
     }
