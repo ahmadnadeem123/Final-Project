@@ -37,7 +37,7 @@ public class Signup extends AppCompatActivity {
         login=findViewById(R.id.createtext);
         pbar=findViewById(R.id.progressBar);
         Auth=FirebaseAuth.getInstance();
-        
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +73,7 @@ public class Signup extends AppCompatActivity {
                         else
                         {
                             Toast.makeText(Signup.this,"Error !"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            pbar.setVisibility(View.GONE);
                         }
                     }
                 });
