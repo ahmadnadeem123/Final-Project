@@ -1,8 +1,10 @@
 package com.example.tripapplication;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,6 +31,7 @@ public class Login extends AppCompatActivity {
     TextView createbtn,forgot;
     ProgressBar pgbar;
     FirebaseAuth Auth;
+    Toolbar t3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,15 @@ public class Login extends AppCompatActivity {
         Auth=FirebaseAuth.getInstance();
         forgot=findViewById(R.id.forgotpass);
         btn=findViewById(R.id.signin);
+
+        t3=findViewById(R.id.toolbar3);
+        setSupportActionBar(t3);
+
+
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

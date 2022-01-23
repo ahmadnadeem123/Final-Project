@@ -1,6 +1,7 @@
 package com.example.tripapplication;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -49,8 +50,17 @@ public class Signup extends AppCompatActivity {
         login=findViewById(R.id.createtext);
         pbar=findViewById(R.id.progressBar);
         Auth=FirebaseAuth.getInstance();
-        t2=findViewById(R.id.toolbar2);
+
         fstore=FirebaseFirestore.getInstance();
+
+        t2=findViewById(R.id.toolbar2);
+        setSupportActionBar(t2);
+
+
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
