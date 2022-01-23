@@ -61,6 +61,7 @@ public class Signup extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
