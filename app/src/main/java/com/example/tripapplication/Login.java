@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login extends AppCompatActivity {
 
@@ -31,6 +35,7 @@ public class Login extends AppCompatActivity {
     TextView createbtn,forgot;
     ProgressBar pgbar;
     FirebaseAuth Auth;
+    FirebaseFirestore fstore;
     Toolbar t3;
 
     @Override
@@ -45,6 +50,7 @@ public class Login extends AppCompatActivity {
         Auth=FirebaseAuth.getInstance();
         forgot=findViewById(R.id.forgotpass);
         btn=findViewById(R.id.signin);
+        fstore=FirebaseFirestore.getInstance();
 
         t3=findViewById(R.id.toolbar3);
         setSupportActionBar(t3);
@@ -78,14 +84,34 @@ public class Login extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(Login.this,"Logged In Successfull !",Toast.LENGTH_SHORT).show();
-                            Intent i=new Intent(Login.this,BookPage.class);
-                            startActivity(i);
+                            checkifadmin(Auth.getCurrentUser().getUid());
+
                         }
                         else
                         {
                             Toast.makeText(Login.this,"Error !"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                             pgbar.setVisibility(View.GONE);
                         }
+                    }
+
+                    private void checkifadmin(String uid) {
+                        DocumentReference df=fstore.collection("users").document(uid);
+                        df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                            @Override
+                            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                Log.d("TAG","onSuccess"+documentSnapshot.getData());
+                                if(documentSnapshot.getString("isAdmin")!=null)
+                                {
+                                    Intent i=new Intent(Login.this,Admin.class);
+                                    startActivity(i);
+                                }
+                                else
+                                {
+                                    Intent i=new Intent(Login.this,BookPage.class);
+                                    startActivity(i);
+                                }
+                            }
+                        });
                     }
                 });
 
@@ -101,6 +127,7 @@ public class Login extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,5 +164,6 @@ public class Login extends AppCompatActivity {
             }
 
         });
+
     }
 }
