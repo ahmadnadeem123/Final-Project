@@ -175,15 +175,16 @@ public class BookPage extends AppCompatActivity {
                  userid=Auth.getCurrentUser().getUid();
                  DocumentReference documentReference=fstore.collection("bookings").document(userid);
                  Map<String,Object> booking= new HashMap<>();
-                 booking.put("noofdays", days);
-                 Log.d("Days","pppp"+days);
+                 booking.put("noofdays", noofdays.getText().toString());
+
                  booking.put("depfrom ",departurefrom);
                  booking.put("depto",departureto);
 
-                 booking.put("accom ",accomodation);
-                 booking.put("noofperson",persons);
+                 booking.put("accom ",accom.getSelectedItem().toString());
+                 booking.put("noofperson",no.getText().toString());
+                 booking.put("checkin",eText.getText().toString());
+                 booking.put("checkout",eText1.getText().toString());
 
-                 Log.d("Persons","pppp"+persons);
 
 
                  documentReference.set(booking).addOnSuccessListener(new OnSuccessListener<Void>() {
