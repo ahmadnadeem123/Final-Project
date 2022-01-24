@@ -13,33 +13,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#1882D6"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="Trip N Tour"
-            app:titleTextColor="#F0F1F8" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1882D6"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Trip N Tour"
+        app:titleTextColor="#F0F1F8" />
 
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="282dp"
-            android:layout_height="63dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="68dp"
-            android:text="Welcome to Trip N Tour"
-            android:textColor="#DACDCD"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="282dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
+        android:text="Welcome to Trip N Tour"
+        android:textColor="#DACDCD"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView2"
@@ -65,6 +65,7 @@
             android:src="@drawable/trip2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
 
         <Button
             android:id="@+id/button1"
@@ -95,9 +96,9 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 
-    </RelativeLayout>
+</RelativeLayout>
 
-    <com.google.android.material.navigation.NavigationView
+<com.google.android.material.navigation.NavigationView
 android:id="@+id/nav_view"
 android:layout_width="wrap_content"
 android:layout_height="match_parent"
