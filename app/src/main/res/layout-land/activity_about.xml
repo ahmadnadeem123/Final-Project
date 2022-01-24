@@ -25,21 +25,20 @@
         android:id="@+id/textView4"
         android:layout_width="176dp"
         android:layout_height="40dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="24dp"
         android:text="About Us"
         android:textColor="#0E0E0E"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="584dp"
-        android:layout_height="285dp"
-        android:layout_marginStart="92dp"
+        android:layout_width="329dp"
+        android:layout_height="513dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="22dp"
         android:layout_marginBottom="76dp"
         android:fontFamily="sans-serif-condensed"
@@ -49,7 +48,6 @@
         android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
