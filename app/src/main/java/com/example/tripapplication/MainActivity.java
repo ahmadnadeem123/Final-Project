@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent obj=new Intent(MainActivity.this, BookPage.class);
+                Intent obj=new Intent(MainActivity.this, Signup.class);
                 startActivity(obj);
 
             }

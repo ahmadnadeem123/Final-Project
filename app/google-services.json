@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "507860365490",
+    "project_id": "trip-application-9e96c",
+    "storage_bucket": "trip-application-9e96c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507860365490:android:3b638cee844350e07699ab",
+        "android_client_info": {
+          "package_name": "com.example.tripapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507860365490-5bia8gvf3qqk9gs21qh16o4p4u1h8r7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6JlOysMC2vt_wdVEz8q6Rm3PbVsL7VkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507860365490-5bia8gvf3qqk9gs21qh16o4p4u1h8r7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
